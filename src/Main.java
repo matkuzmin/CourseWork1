@@ -15,7 +15,6 @@ public class Main {
         employees[8] = new Employee("Анна П", 3, 50000);
         employees[9] = new Employee("Виктория З", 2, 5000);
 
-
         Functions.personPrint(employees);
         Functions.summSalary(employees);
         Functions.minSum(employees);

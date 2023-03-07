@@ -33,8 +33,8 @@ public class Employee {
         this.department = department;
     }
 
-    public static void setCount(int count) {
-        Employee.count = count;
+    public void setSalary(int salary) {
+        this.salary = salary;
     }
 
     @Override
