@@ -21,6 +21,17 @@ public class Main {
         Functions.maxSum(employees);
         Functions.averageSum(employees);
         Functions.namePrint(employees);
-
+        float index = 1.2f;
+        Functions.indexSalary(employees, index);
+        int numberDepartament = 3;
+        Functions.departMinSalary(employees, numberDepartament);
+        Functions.departMaxSalary(employees, numberDepartament);
+        Functions.departSummSalary(employees, numberDepartament);
+        Functions.departAverageSum(employees, numberDepartament);
+        Functions.departIndexSalary(employees, index, numberDepartament);
+        Functions.derartPersonPrint(employees, numberDepartament);
+        int numberSalary = 10000;
+        Functions.lessSalary(employees, numberSalary);
+        Functions.moreSalary(employees, numberSalary);
     }
 }
