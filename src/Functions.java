@@ -16,9 +16,9 @@ public class Functions {
     public static int summSalary(Employee[] arr) {
         int summa = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] != null)
+            if (arr[i] != null) {
                 summa = summa + arr[i].getSalary();
-            else continue;
+            } else continue;
         }
         System.out.println("Сумма затрат на зарплаты в месяц: " + summa);
         lineSplitting();
@@ -26,8 +26,8 @@ public class Functions {
 
     }
 
-    public static void minSum(Employee[] arr) {
-        int summ = arr[0].getSalary();
+    public static void findMinSalary(Employee[] arr) {
+        int summ = Integer.MAX_VALUE;
         for (int i = 0; i < arr.length; i++) {
             if (summ > arr[i].getSalary() && arr[i] != null)
                 summ = arr[i].getSalary();
@@ -37,7 +37,7 @@ public class Functions {
         lineSplitting();
     }
 
-    public static void maxSum(Employee[] arr) {
+    public static void findMaxSum(Employee[] arr) {
         int summ = -1;
         for (int i = 0; i < arr.length; i++) {
             if (summ < arr[i].getSalary() && arr[i] != null)
@@ -49,9 +49,17 @@ public class Functions {
     }
 
     public static void averageSum(Employee[] arr) {
-        float avarage = (float) summSalary(arr) / 12;
-        System.out.println("Среднее значение зарплат: " + avarage);
-        lineSplitting();
+        int summa = 0;
+        int person = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != null) {
+                summa = summa + arr[i].getSalary();
+                person++;
+                float avarage = summa / person;
+                System.out.println("Среднее значение зарплат: " + avarage);
+                lineSplitting();
+            }
+        }
     }
 
     public static void namePrint(Employee[] arr) {
@@ -68,16 +76,15 @@ public class Functions {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] != null) {
                 arr[i].setSalary((int) (arr[i].getSalary() * index));
-            } else continue;
+            }
         }
-        System.out.println(arr[1].getSalary());
         lineSplitting();
     }
 
     public static void departMinSalary(Employee[] arr, int dep) {
         int summ = Integer.MAX_VALUE;
         for (int i = 0; i < arr.length; i++) {
-            if (summ > arr[i].getSalary() && arr[i] != null && arr[i].getDepartment() == dep)
+            if (arr[i] != null && summ > arr[i].getSalary() && arr[i].getDepartment() == dep)
                 summ = arr[i].getSalary();
             else continue;
         }
@@ -127,7 +134,6 @@ public class Functions {
                 arr[i].setSalary((int) (arr[i].getSalary() * index));
             } else continue;
         }
-        System.out.println(arr[1].getSalary());
         lineSplitting();
     }
 
@@ -140,6 +146,7 @@ public class Functions {
         }
         lineSplitting();
     }
+
     public static void lessSalary(Employee[] arr, int num) {
         System.out.println("Список сотрудников с зарплатой меньше" + num);
         for (int i = 0; i < arr.length; i++) {
@@ -149,6 +156,7 @@ public class Functions {
         }
         lineSplitting();
     }
+
     public static void moreSalary(Employee[] arr, int num) {
         System.out.println("Список сотрудников с зарплатой больше" + num);
         for (int i = 0; i < arr.length; i++) {

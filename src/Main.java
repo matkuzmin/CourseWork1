@@ -17,8 +17,8 @@ public class Main {
 
         Functions.personPrint(employees);
         Functions.summSalary(employees);
-        Functions.minSum(employees);
-        Functions.maxSum(employees);
+        Functions.findMinSalary(employees);
+        Functions.findMaxSum(employees);
         Functions.averageSum(employees);
         Functions.namePrint(employees);
         float index = 1.2f;
