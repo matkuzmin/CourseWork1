@@ -55,10 +55,10 @@ public class Functions {
             if (arr[i] != null) {
                 summa = summa + arr[i].getSalary();
                 person++;
-                float avarage = summa / person;
-                System.out.println("Среднее значение зарплат: " + avarage);
-                lineSplitting();
             }
+            float avarage = summa / person;
+            System.out.println("Среднее значение зарплат: " + avarage);
+            lineSplitting();
         }
     }
 
